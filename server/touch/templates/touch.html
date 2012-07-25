@@ -1,0 +1,62 @@
+<html>
+    <head>
+
+        <link href="{{STATIC_URL}}css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <script src="{{STATIC_URL}}javascript/jq.js"></script>
+        <script src="{{STATIC_URL}}javascript/jquery-ui.min.js"></script>
+        <LINK rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/touch.css"/>	
+
+    </head>
+    <body>
+        <div id="text-cont">
+            <!--<textarea id = "type_text" rows="5" cols="30" readonly="readonly">This is what you have to type.
+            </textarea> -->
+            <div id="last_stats-div">
+                <h3>Speed (wpm):</h3>
+                <p id="speed_msg"></p>
+                <br/>
+                <h3>Accuracy (%):</h3>
+                <p id="accuracy_msg"> </p>
+            </div>	
+            <div id="text-div">
+            </div>
+
+
+        </div>
+        <div id="touch-div">
+            <input id = "touch" type="text" size="30"/>
+        </div>
+
+        <br/>
+        <br/>
+
+        <div id="tabs">
+
+            <ul>
+                <li> <a href="#content-div">Content</a> </li>
+                <li> <a href="#stats-div">Stats</a> </li>
+            </ul>
+            <div class ="tab" id = "content-div" ></div>
+
+            <div class ="tab" id="stats-div">
+                <table id="stats-table">
+                </table>
+            </div>
+
+        </div>
+
+
+        <div id="csrf-div">
+            {% csrf_token %}
+        </div>
+
+		<script>
+			BASE_URL = 'http://touchtype20.herokuapp.com/';
+		</script>
+        <script type="text/javascript" src="{{STATIC_URL}}javascript/TouchView.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL}}javascript/TouchType.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL}}javascript/TouchData.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL}}javascript/TouchApp.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL}}javascript/touch.js"></script>
+    </body>
+</html>

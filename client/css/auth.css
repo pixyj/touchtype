@@ -1,0 +1,22 @@
+#auth-div {
+    width: 600px;
+}
+
+#login-div {
+    position: relative;
+    float : right;
+    /*left : 500px;*/
+    
+}
+
+#signup-div {
+    position : relative;
+    float :left;
+}
+
+.button {
+    font-size: 20px;
+}
+#signup-msg,#login-msg {
+    font-size: 15px;
+}

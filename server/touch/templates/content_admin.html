@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title> </title>
+	</head>
+	
+	<body>
+	
+	{% csrf_token %}
+	
+	
+	<br/>
+	
+	<textarea rows="20" cols="100" id="text"> </textarea>
+	<br/>
+	<button id="preview-button">Preview </button>
+	<button id="save-button">Save</button>
+	<button id="get-button">Get</button>
+	Level: <input type="text" id="level-input" size="2" /> 
+	<div id="preview-div" style="width:1000px;background-color:#eee">
+	
+	</div>
+	
+	<script>
+		BASE_URL = 'http://touchtype20.herokuapp.com/'
+	</script>
+	
+	<script type="text/javascript" src="{{STATIC_URL}}javascript/jq.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}javascript/nicEdit.js"></script>	
+	<script type="text/javascript" src="{{STATIC_URL}}javascript/TouchUtils.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}javascript/TouchAdmin.js"></script>
+	</body>
+
+</html>

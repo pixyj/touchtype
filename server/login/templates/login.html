@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link href="{{STATIC_URL}}css/auth.css" rel="stylesheet" type="text/css"/>
+        <script src="{{STATIC_URL}}javascript/jq.js"></script>
+        
+    </head>
+    <body>
+        <div id="auth-div">
+            
+            <div id="login-div">
+                <h2>Using Already? Log in</h2>
+                <form>
+                    <h3>Username</h3>
+                    <input type="text" id="login-username"> <br/>
+                    <h3>Password</h3>
+                    <input type="password" id="login-password"> 
+                    <br/>
+                    <br/>
+                    <button class ="button" id="login-button">Log in </button>
+                </form>
+                <p id="login-msg"> </p>
+            </div>
+
+            <div id="signup-div">
+                <h2>New User? Sign up</h2>
+                <form>
+                    <h3>Username</h3>
+                    <input type="text" id="signup-username"> <br/>
+                    <h3>Password</h3>
+                    <input type="password" id="signup-password">
+                    <br/>
+                    <br/>
+                    <button class="button" id="signup-button">Sign up</button>
+                </form>
+                <p id="signup-msg"> </p>
+            </div>
+        </div>
+
+        {% csrf_token %}
+        
+        <script>
+        BASE_URL='http://touchtype20.herokuapp.com'
+        </script>
+        
+        <script src="{{STATIC_URL}}javascript/TouchUtils.js"></script>
+        <script src="{{STATIC_URL}}javascript/auth.js"></script>
+
+    </body>
+
+</html>
+
